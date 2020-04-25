@@ -23,8 +23,17 @@
 </head>
 <body>
 
-	<!-- Insert Header here -->
-	<h1>Header Goes Here</h1>
+	<div class="header">
+        <img src="{% static 'home/images/friends.png' %}" id="friends"alt="isabelle">
+        <h1>Animal Crossing Zoo</h1>
+    </div>
+    <div class="sidenav">
+        <a href="#">Home</a>
+        <a href="#">Existing user</a>
+        <a href="#">Create user</a>
+        <a href="#">Book a zoo</a>
+    </div>
+</body>
 	{% block content %}{% endblock content%}
 
 </body>
