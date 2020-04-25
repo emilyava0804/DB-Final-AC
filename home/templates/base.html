@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+
+	<style type="text/css">
+    	body {
+    		background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+    		background-size: cover;
+    	}
+    </style>
+
+
+    {% if title %}
+    <title>Animal Crossing Zoo - {{ title }}</title>
+    {% else %}
+    <title>Animal Crossing Zoo</title>
+    {% endif %}
+</head>
+<body>
+
+	<!-- Insert Header here -->
+	<h1>Header Goes Here</h1>
+	{% block content %}{% endblock content%}
+
+</body>
+</html>
