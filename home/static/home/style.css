@@ -40,6 +40,13 @@
     font-size: 17px;
   }
 .sidenav a:hover {
-    background: #ddd;
+	width: 100%;
+    background-color: rgb(245, 245, 202);
     color: black;
   }
+ .sidenav a.active {
+ 	text-align: left;
+ 	width: 100%;
+ 	background-color: rgb(254, 239, 131);
+ 	color: black;
+ }
