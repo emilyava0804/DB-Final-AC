@@ -7,3 +7,10 @@ def home(request):
 
 def animals(request):
     return render(request, 'animals.html', {'title': 'Animals'})
+
+def staff(request):
+	return render(request, 'staff.html', {'title': 'Staffs'})
+
+
+def login(request):
+    return render(request, 'login.html', {'title': 'Login'})
