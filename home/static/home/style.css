@@ -33,20 +33,18 @@
     font-family:Trebuchet MS, sans-serif;
     float: left;
     display: block;
+    width: 100%;
     color: #f2f2f2;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: underline;
     font-size: 17px;
   }
 .sidenav a:hover {
-	width: 100%;
     background-color: rgb(245, 245, 202);
     color: black;
   }
  .sidenav a.active {
- 	text-align: left;
- 	width: 100%;
  	background-color: rgb(254, 239, 131);
  	color: black;
  }
