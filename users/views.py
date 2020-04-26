@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from . forms import UserRegisterForm
+from django.views.generic import ListView, DetailView, UpdateView
+from . models import employee, employeePhone, volunteer, volunteerPhone
 
 # Create your views here.
 def register(request):
@@ -16,3 +18,14 @@ def register(request):
 
 def staff_home(request):
     return render(request, 'users/staff_home.html', {'title': 'Staff-Home'})
+
+
+def staff_staff(request):
+	employees = employee.objects.all()
+	ephones = employeePhone.objects.all()
+	volunteers = volunteer.objects.all()
+	volunteerPhones = volunteerPhone.objects.all()
+	context= {'employees': employees, 'ephones': ephones, 'volunteers': volunteers, 'volunteerPhones': volunteerPhones}
+
+	return render(request, 'users/staff_staff.html', context)
+
