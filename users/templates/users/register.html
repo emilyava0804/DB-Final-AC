@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<style type="text/css">
+		.user-box {
+			margin-top: 250px;
+			margin-left: 450px;
+			width: 50%;
+			border: solid;
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 25px;
+			color: black;
+		}
+
+		div {
+			font-family:Trebuchet MS, sans-serif;
+		}
+
+	</style>
+
+	<div class="sidenav">
+        <a href="\home\home">Home</a>
+        <a href="\home\animals">Meet our Animals</a>
+        <a href="\home\staff">Meet our Staff</a>
+        <a class="active" href="{% url 'login' %}">Staff Login</a>
+    </div>
+
+    <!-- Main Body -->
+    <div class="user-box content-section">
+    	<form method="POST" >
+    		{% csrf_token %}
+    		<fieldset class="form-group">
+    			<legend class="border-bottom">Join Now</legend>
+    			{{ form|crispy }}
+    		</fieldset>
+    		<div class="form-group" style="padding-top: 25px; padding-bottom: 15px">
+    			<button class="btn btn-outline-info" type="submit">Submit</button>
+    		</div>
+    	</form>
+    	<div class="border-top">
+    		<small class="text-muted">Already Have An Account? <a href="{% url 'login' %}">Sign In</a></small>
+    	</div>
+    </div>
+
+{% endblock content %}

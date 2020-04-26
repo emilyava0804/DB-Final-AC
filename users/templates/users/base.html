@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'users/static/users/style-users.css' %}">
+
+	<style type="text/css">
+    	body {
+    		background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+    		background-size: cover;
+    	}
+    </style>
+
+
+    {% if title %}
+    <title>Animal Crossing Zoo - {{ title }}</title>
+    {% else %}
+    <title>Animal Crossing Zoo</title>
+    {% endif %}
+</head>
+<body>
+
+	<div class="header">
+        <img src="{% static 'home/images/friends.png' %}" id="friends"alt="isabelle">
+        <h1>Animal Crossing Zoo</h1>
+    </div>
+</body>
+	{% block content %}{% endblock content%}
+</body>
+</html>

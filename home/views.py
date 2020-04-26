@@ -11,6 +11,5 @@ def animals(request):
 def staff(request):
 	return render(request, 'staff.html', {'title': 'Staffs'})
 
-
 def login(request):
     return render(request, 'login.html', {'title': 'Login'})
