@@ -1,25 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="sidenav">
-        <a class="active" href="/users/staff_home">Home</a>
-        <a href="#">Animals</a>
-        <a href="#">Staff</a>
-        <a href="#">Exhibits and Parks</a>
-        <a href="{% url 'logout' %}">Logout</a>
-    </div>
+<!-- Header -->
+<div class="sidenav">
+    <a class="active" href="/users/staff_home">Home</a>
+    <a href="#">Animals</a>
+    <a href="#">Staff</a>
+    <a href="#">Exhibits and Parks</a>
+    <a href="#">Profile</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</div>
 
+<!-- Main Body -->
+{% if user.is_authenticated %}
+    <h1 style="padding-top: 300px; padding-left: 300px">Welcome, {{ user.get_username }}. You are now in the staff portal.</h1>
+		<div style="padding-left: 300px">
+			<h3>This is valuable placeholder information</h3>
+		</div>
+                                         
+    {% else %}
+    <h1>Please login.</h1>
+    
+{% endif %}
 
-	{% if user.is_authenticated %}
-        <h1 style="padding-top: 300px; padding-left: 300px">Welcome, {{ user.get_username }}. You are now in the staff portal.</h1>
-
-
-			<div style="padding-left: 300px">
-				<h3>This is valuable placeholder information</h3>
-			</div>
-                                             
-        {% else %}
-        <h1>Please login.</h1>
-    {% endif %}
+<!-- Footer -->
+<div class="footer">
+&copy; Animal Crossing Zoo
+</div>
 
 {% endblock content %}

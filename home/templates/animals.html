@@ -1,12 +1,129 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+<style type="text/css">
+	body {
+		background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+		background-size: contain;
+	}
+</style>
 
+<!-- Header -->
 <div class="sidenav">
-        <a href="\home\home">Home</a>
-        <a class="active" href="\home\animals">Meet our Animals</a>
-        <a href="\home\staff">Meet our Staff</a>
-        <a href="{% url 'login' %}">Staff Login</a>
-    </div>
+    <a href="\home\home">Home</a>
+    <a class="active" href="\home\animals">Meet our Animals</a>
+    <a href="\home\staff">Meet our Staff</a>
+    <a href="{% url 'login' %}">Staff Login</a>
+</div>
 
-{% endblock content%}
+<!-- Main Body -->
+<div class="user-box" style="text-align: center;">
+	<h1>Meet Our Babies!</h1>
+	<h3>All of our animals are treated as if they are our own babies, because in some sense, they are! All of our animals have ample room, their own houses, and a friend specifically made for them. See them below and become familiar here before you come visit us!</h3>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Pinky the Bear</h3>
+		<img src="{% static 'home/images/Pinky.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Marina the Octopus</h3>
+		<img src="{% static 'home/images/Marina.jpg' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Melba the Koala</h3>
+		<img src="{% static 'home/images/Melba.png' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Poppy the Squirrel</h3>
+		<img src="{% static 'home/images/Poppy.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Marshal the Squirrel</h3>
+		<img src="{% static 'home/images/Marshal.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Drago the Dragon</h3>
+		<img src="{% static 'home/images/Drago.png' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Coco the Bunny</h3>
+		<img src="{% static 'home/images/Coco.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Nana the Monkey</h3>
+		<img src="{% static 'home/images/Nana.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Wendy the Ram</h3>
+		<img src="{% static 'home/images/Wendy.png' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Leopold the Lion</h3>
+		<img src="{% static 'home/images/Leopold.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Ankha the Leopard</h3>
+		<img src="{% static 'home/images/Ankha.jpg' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Lolly the Leopard</h3>
+		<img src="{% static 'home/images/Lolly.jpg' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Purrl the Tiger</h3>
+		<img src="{% static 'home/images/Purrl.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Tangy the Panther</h3>
+		<img src="{% static 'home/images/Tangy.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Ketchup the Swan</h3>
+		<img src="{% static 'home/images/Ketchup.png' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Zucker the Snake</h3>
+		<img src="{% static 'home/images/Zucker.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Gayle the Alligator</h3>
+		<img src="{% static 'home/images/Gayle.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Skye the Wolf</h3>
+		<img src="{% static 'home/images/Skye.png' %}" class="animal-image">
+	</div>
+</div>
+<div class="row">
+	<div class="col-three animal-box">
+		<h3>Erik the Deer</h3>
+		<img src="{% static 'home/images/Erik.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Fauna the Deer</h3>
+		<img src="{% static 'home/images/Fauna.png' %}" class="animal-image">
+	</div>
+	<div class="col-three animal-box-1">
+		<h3>Punchy the Panther</h3>
+		<img src="{% static 'home/images/Punchy.png' %}" class="animal-image">
+	</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+	&copy; Animal Crossing Zoo
+</div>
+
+{% endblock content %}

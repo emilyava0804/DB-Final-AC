@@ -48,3 +48,78 @@
  	background-color: rgb(254, 239, 131);
  	color: black;
  }
+
+ /* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Animals */
+.col-three {
+  float: left;
+  width: 33.33%;
+}
+
+
+.row {
+  display: flex;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, div, a {
+    font-family:Trebuchet MS, sans-serif;
+}
+
+.user-box {
+    margin-top: 150px;
+    margin-left: 450px;
+    width: 50%;
+    border: solid;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    color: black;
+}
+
+div {
+    font-family:Trebuchet MS, sans-serif;
+}
+
+.animal-box {
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    border: solid;
+    width:250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    color: black;
+    text-align: center;
+}
+
+.animal-box-1 {
+    margin-top: 50px;
+    margin-left: 175px;
+    margin-bottom: 50px;
+    border: solid;
+    width:250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    color: black;
+    text-align: center;
+}
+
+.animal-image {
+  height: 325px; 
+  width: 230px
+}
