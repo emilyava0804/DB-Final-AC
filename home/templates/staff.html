@@ -1,6 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+<style type="text/css">
+	h3 {
+		font-style: italic;
+	}
+	body {
+		background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+		background-size: contain;
+	}
+</style>
 
 <!-- Header -->
 <div class="sidenav">
@@ -11,8 +21,74 @@
 </div>
 
 <!-- Main Body -->
+<div class="user-box" style="text-align: center; margin: auto; margin-top: 150px">
+	<h1>Our Staff</h1>
+	<p>Our staff is dedicated to helping you and our animals in every way possible. From customizing each animal's habitat, food and exhibit-mate to making sure every guest has a wonderful and memorable time, our staff works overtime to make Animal Crossing Zoo a star on the map. </p>
+</div>
 
+<div class="user-box" style="width: 15%; text-align: center; margin: auto; margin-top: 20px">
+	<h3>Meet our CEO</h3>
+	<h4>Freya Fritter</h4>
+	<img src="{% static 'home/images/freya.png' %}">
+	<p>Freya has been the CEO since our opening in 2010. She has worked hard to turn this plot of trees and grass into a haven for our animals and patrons. </p>
+</div>
 
+<div class="user-box" style="width: 15%; text-align: center; margin: auto; margin-top: 20px">
+	<h3>Meet our Manager</h3>
+	<h4>Daisy Coffee</h4>
+	<img src="{% static 'home/images/daisy_mae.jfif' %}" style="width:230px; height: 250px">
+	<p>Daisy has been with us since the beginning along with Freya. As young girls, they always dreamed of starting their own zoo. Freya and Daisy built this place from the ground up together.</p>
+</div>
+<div class="user-box" style="width:75%; text-align: center; margin: auto; margin-top: 20px">
+	<h3>Our Medical Staff</h3>
+	<div class="row">
+		<div class="col-three"> 
+			<h4>Clyde Costeau</h4>
+			<img src="{% static 'home/images/clyde.jpg'%}" class="animal-box" style="margin: auto;">
+			<p>Doctor of Medicine (M.D.)</p>
+		</div>
+		<div class="col-three"> 
+			<h4>Judy Lynburg</h4>
+			<img src="{% static 'home/images/judy.jpg'%}" class="animal-box" style="margin: auto;">
+			<p>Masters in Veterinary Sciences</p>
+		</div>
+		<div class="col-three"> 
+			<h4>Deena Cranston</h4>
+			<img src="{% static 'home/images/deena.png'%}" class="animal-box" style="margin: auto;">
+			<p>Advanced Practice Nurses (APRN)</p>
+		</div>
+	</div>
+</div>
+<div class="user-box" style="width:75%; text-align: center; margin: auto; margin-top: 20px">
+	<h3>Other Staff</h3>
+	<div class="row">
+		<div class="col-three"> 
+			<h4>Butch Bradley</h4>
+			<img src="{% static 'home/images/Butch.png'%}" class="animal-box" style="margin: auto;">
+		</div>
+		<div class="col-three"> 
+			<h4>Huck O'Hare</h4>
+			<img src="{% static 'home/images/Huck.png'%}" class="animal-box" style="margin: auto;">
+		</div>
+		<div class="col-three"> 
+			<h4>Groucho Grawgins</h4>
+			<img src="{% static 'home/images/Groucho.jpg'%}" class="animal-box" style="margin: auto;">
+		</div>
+	</div>
+</div>
+<div class="user-box" style="width:50%; text-align: center; margin: auto; margin-top: 20px; margin-bottom: 100px">
+	<h3>Our Cleaning Staff</h3>
+	<div class="row">
+		<div class="col-two"> 
+			<h4>Rex Roofy</h4>
+			<img src="{% static 'home/images/Rex.png'%}" class="animal-box" style="margin: auto;">
+		</div>
+		<div class="col-two" style="margin-left: 210px"> 
+			<h4>Sandy Scoot</h4>
+			<img src="{% static 'home/images/Sandy.png'%}" class="animal-box" style="margin: auto; height: 310px">
+		</div>
+	</div>
+</div>
 
 <!-- Footer -->
 <div class="footer">

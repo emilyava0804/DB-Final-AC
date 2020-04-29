@@ -30,19 +30,16 @@ def staff_staff(request):
 	return render(request, 'users/staff_staff.html', context)
 
 
-def staff_animals(request):
-	animals = animal.objects.all()
-	specialAnimals = specialAnimal.objects.all()
-	specialNeeds = specialNeed.objects.all()
-	animalFoods = animalFood.objects.all()
-	context= {'animals': animals, 'specialAnimals': specialAnimals, 'specialNeeds': specialNeeds, 'animalFoods': animalFoods}
-
-	return render(request, 'users/staff_animals.html', context)
-
-
 def staff_exhibits(request):
 	parks = park.objects.all()
 	exhibits = exhibit.objects.all()
 	context = {'parks': parks, 'exhibits': exhibits}
 
 	return render(request, 'users/staff_exhibits.html', context)
+
+
+class staff_animals(ListView):
+	model = animal 
+	template_name = 'users/staff_animals.html'
+	context_object_name = 'animals'
+
