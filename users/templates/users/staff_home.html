@@ -1,6 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+<style type="text/css">
+    body {
+        background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+        background-size: contain;
+    }
+</style>
+
 <!-- Header -->
 <div class="sidenav">
     <a class="active" href="/users/staff_home">Home</a>
@@ -12,15 +20,17 @@
 
 <!-- Main Body -->
 {% if user.is_authenticated %}
-    <h1 style="padding-top: 300px; padding-left: 300px">Welcome, {{ user.get_username }}. You are now in the staff portal.</h1>
-		<div style="padding-left: 300px">
-			<h3>This is valuable placeholder information</h3>
-		</div>
+    <div class="user-box" style="text-align: center;">
+        <h1>Welcome, {{ user.get_username }}. </h1>
+        <h3>You are now in the employee portal. You can access all data from the database, including animals, employees, salaries, medical needs and exhibits.</h3>
+    </div>
+    <img src="{% static 'home/images/tom.jpg' %}" style="margin-left: 390px; width: 60%; margin-top: 50px; margin-bottom: 100px">
                                          
     {% else %}
     <h1>Please login.</h1>
     
 {% endif %}
+
 
 <!-- Footer -->
 <div class="footer">

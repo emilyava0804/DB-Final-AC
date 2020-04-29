@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <style type="text/css">
@@ -14,6 +15,11 @@
 
 	div {
 		font-family:Trebuchet MS, sans-serif;
+	}
+
+	body {
+		background-image: url('{% static 'home/images/Tom-Nook-bg.png' %}');
+		background-size: contain;
 	}
 
 </style>
@@ -33,9 +39,15 @@
         <small class="text-muted"><a href="{% url 'login' %}">Login Again</a></small>
     </div>
 </div>
-<!-- Insert Home.html text here -->
 
-
+<!-- Main Body -->
+<div class="user-box" style="text-align: center;">
+    <h1>Our Story</h1>
+    <p>The Animal Crossing Zoo was founded in 2010, with the premise of giving animals a safe space to cross.</p>
+    <p>We are dedicated to giving our animals the life they deserve in a safe space, with human companionship.</p>
+    <p>Most of our animals were rescued from deserted islands.</p>
+</div>
+<img src="{% static 'home/images/animal_crossing.jpg' %}" style="margin-left: 250px ; width: 80%; margin-top: 50px; margin-bottom: 100px">
 
 
 
